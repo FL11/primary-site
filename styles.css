@@ -1,0 +1,198 @@
+/* some gool fade animations */
+@-webkit-keyframes fade {
+	from {background-color: #2d2d2d;}
+	to {background-color:#cc6600;}
+}
+
+html {
+	margin: 0;
+	background-color: #2d2d2d;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial;
+}
+
+#header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	background-color: #e87f13;
+	display: flex;
+	overflow: hidden;
+	font-size: 12pt;
+	font-weight: bold;
+	-webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+#headerimg {  
+	height: 40px;
+	width: 270px;
+}
+
+#header ul {
+	list-style-type: none;
+	margin: 0;
+	
+	height: auto;
+	overflow: hidden;
+}
+
+#header ul li {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	margin-right: 20px;
+	float: left;
+}
+
+#header ul li a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+}
+
+a:hover {
+	background-color: #995209;
+}
+
+#main {
+	margin: 30px;
+	min-height: 100%;
+}
+
+
+blockquote { 
+  border-left: 5px solid #fff; 
+  padding-left: 10px; 
+  font-size: 20px;
+  width: 68%;
+  float: left;
+}
+
+
+h4 {
+	color: #f1881b;
+	font-size: 32pt;
+	line-height: 1px;
+	font-weight: bold;
+}
+
+a {
+	color: #e87f13;
+}
+
+
+#main {
+	width: 90vw;
+	margin-top: 30px;
+	min-height: calc(100vh - 48px - 58px);
+	padding: 20px;
+}
+
+.flex-container {
+	display: flex;
+}
+
+.flex-child {
+	flex: 1;
+}
+
+.flex-child:first-child {
+	margin-right: 20px;
+}
+
+footer {
+    text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+.chatwidget {
+    text-align: center;
+}
+
+table tr td {
+	padding: 13px 55px;
+}
+
+table tr:first-child {
+	background-color: #e87f13;
+	text-align: center;
+	font-weight: bold;
+}
+
+table tr:nth-child(even) {
+	background-color: #222;
+}
+
+#sheets {
+	padding: 20px;
+	-webkit-border-radius: 20px;
+	background-color: orange;
+	color: #fff;
+	border: 0;
+	width: 50%;
+	font-size: 32px;
+	font-family: Arial;
+}
+
+#sheets:hover {
+	background-color: #995209;
+}
+
+#btn {text-align: center;}
+
+#discord, #reddit, #facebook {
+	padding: 20px;
+	-webkit-border-radius: 16px;
+}
+
+#discord:hover {
+	background-color: #5865F2;
+	cursor: pointer;
+}
+
+#reddit:hover {
+	background-color: #FF4500;
+	cursor: pointer;
+}
+
+#facebook:hover {
+	background-color: #3B5998;
+	cursor: pointer;
+}
+
+.cards {
+	display: flex;
+}
+
+#card_element {
+	padding: 10px 30px;
+	-webkit-border-radius: 15px;
+	float: left;
+	text-align: left;
+	width: 50%;
+	flex: 1;
+}
+
+#card_element:hover {
+	-webkit-animation: fade 0.3s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.largetext {
+	font-size: 24pt;
+	font-weight: bold;
+}
+
+.under_const {
+	background-color: #AA336A;
+	color: white;
+	padding: 10px;
+	-webkit-border-radius: 16px;
+}
