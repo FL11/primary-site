@@ -22,7 +22,26 @@
             <h4>All of my works</h4>
 			<p>In this page, you will find all of the Black MIDIs I have created, and their respective video links on my own YouTube channel.</p>
 			<p>(No download links, of course. I keep them private due to some reasons. :P)</p>
-			<br>
+			<div class="items" style="color:#e87f13">
+				<div id="arrayLength" style='font-size:14pt;font-weight:bold;float:left'></div>
+				<select id="sortoptions">
+					<option value="none" onclick="mapDataToHtmlTable()">No particular order</option>
+					<option value="titleA" onclick="TitleAsc()">Title (Ascending order)</option>
+					<option value="titleB" onclick="TitleDesc()">Title (Descending order)</option>
+					<option value="artistA" onclick="ArtistAsc()">Artist (Ascending order)</option>
+					<option value="artistB" onclick="ArtistDesc()">Artist (Descending order)</option>
+					<option value="notesA" onclick="noteCountAsc()">Note count (Smallest to largest)</option>
+					<option value="notesB" onclick="noteCountDesc()">Note count (Largest to smallest)</option>
+				</select>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
+				<input type="text" id="searchbar" placeholder="Enter keywords..." onkeyup="search()"/>
+				<select id="searchoptions" style="margin-right:10px">
+					<option>Search by title</option>
+					<option>Search by artist</option>
+				</select>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Search:</b></span>
+			</div>
+			<br><br>
 			<div id="tableSection"></div>
 			<h4>Unfinished MIDIs</h4>
 		    <p>Click on the button below to view all of the MIDIs I'm currently working on. This opens a new tab in your browser and takes you to a Google Sheets spreadsheet.</p>
