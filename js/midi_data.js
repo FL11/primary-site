@@ -175,7 +175,9 @@ function search() {
             }
         }
     }
-}function search() {
+}
+
+function search() {
     var input, filter, table, tr, td, i, txtValue, searchOptions;
 
     input = document.getElementById("searchbar");
