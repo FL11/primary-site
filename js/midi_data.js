@@ -1,5 +1,5 @@
-function mapDataToHtmlTable() {
-	var tableElement = '<table cellspacing="0" id="mytable"><thead class="header"><th style="width:19%">Title</th><th style="width:15%">Artist(s)</th><th>Notes</th><th>Collaborators</th><th>Video links</th></thead><tbody>';
+var mapDataToHtmlTable = function() {
+	var tableElement = '<table cellspacing="0" id="mytable"><thead class="header"><th style="width:30vh">Title</th><th style="width:30vh">Artist(s)</th><th>Notes</th><th>Collaborators</th><th>Video links</th></thead><tbody>';
 	var table = document.getElementById('mytable');
 	
 	var midis = [{
@@ -66,79 +66,82 @@ function mapDataToHtmlTable() {
 	document.getElementById('tableSection').innerHTML = tableElement;
 }
 
-function noteCountAsc() {
-	var $tbody = $('table tbody');
-	$tbody.find('tr').sort(function(a,b) {
-		var tda = $(a).find('td:eq(2)').text();
-		var tdb = $(b).find('td:eq(2)').text();
+var sortByCount = function() {
+	var descending = document.getElementById('descending').checked;
+	if (descending === false) {
+		var $tbody = $('table tbody');
+		$tbody.find('tr').sort(function(a,b) {
+			var tda = $(a).find('td:eq(2)').text();
+			var tdb = $(b).find('td:eq(2)').text();
 		
-		return +tda > +tdb ? 1
-			: +tda < +tdb ? -1
-			: 0;
-	}).appendTo($tbody);
-}
-
-function noteCountDesc() {
-	var $tbody = $('table tbody');
-	$tbody.find('tr').sort(function(a,b) {
-		var tda = $(a).find('td:eq(2)').text();
-		var tdb = $(b).find('td:eq(2)').text();
+			return +tda > +tdb ? 1
+				: +tda < +tdb ? -1
+				: 0;
+		}).appendTo($tbody);	
+	} else {
+		var $tbody = $('table tbody');
+		$tbody.find('tr').sort(function(a,b) {
+			var tda = $(a).find('td:eq(2)').text();
+			var tdb = $(b).find('td:eq(2)').text();
 		
-		return +tda < +tdb ? 1
-			: +tda > +tdb ? -1
-			: 0;
-	}).appendTo($tbody);
-}
+			return +tda < +tdb ? 1
+				: +tda > +tdb ? -1
+				: 0;
+		}).appendTo($tbody);	
+	}
+};
 
-function TitleAsc() {
-	var $tbody = $('table tbody');
-	$tbody.find('tr').sort(function(a,b) {
-		var tda = $(a).find('td:eq(0)').text();
-		var tdb = $(b).find('td:eq(0)').text();
+var sortByTitle = function() {
+	var descending = document.getElementById('descending').checked;
+	if (descending === false) {
+		var $tbody = $('table tbody');
+		$tbody.find('tr').sort(function(a,b) {
+			var tda = $(a).find('td:eq(0)').text();
+			var tdb = $(b).find('td:eq(0)').text();
 		
-		return tda > tdb ? 1
-			: tda < tdb ? -1
-			: 0;
-	}).appendTo($tbody);
-}
-
-function TitleDesc() {
-	var $tbody = $('table tbody');
-	$tbody.find('tr').sort(function(a,b) {
-		var tda = $(a).find('td:eq(0)').text();
-		var tdb = $(b).find('td:eq(0)').text();
+			return tda > tdb ? 1
+				: tda < tdb ? -1
+				: 0;
+		}).appendTo($tbody);	
+	} else {
+		var $tbody = $('table tbody');
+		$tbody.find('tr').sort(function(a,b) {
+			var tda = $(a).find('td:eq(0)').text();
+			var tdb = $(b).find('td:eq(0)').text();
 		
-		return tda < tdb ? 1
-			: tda > tdb ? -1
-			: 0;
-	}).appendTo($tbody);
-}
+			return tda < tdb ? 1
+				: tda > tdb ? -1
+				: 0;
+		}).appendTo($tbody);	
+	}
+};
 
-function ArtistAsc() {
-	var $tbody = $('table tbody');
-	$tbody.find('tr').sort(function(a,b) {
-		var tda = $(a).find('td:eq(1)').text();
-		var tdb = $(b).find('td:eq(1)').text();
+var sortByArtistName = function() {
+	var descending = document.getElementById('descending').checked;
+	if (descending === false) {
+		var $tbody = $('table tbody');
+		$tbody.find('tr').sort(function(a,b) {
+			var tda = $(a).find('td:eq(1)').text();
+			var tdb = $(b).find('td:eq(1)').text();
 		
-		return tda > tdb ? 1
-			: tda < tdb ? -1
-			: 0;
-	}).appendTo($tbody);
-}
-
-function ArtistDesc() {
-	var $tbody = $('table tbody');
-	$tbody.find('tr').sort(function(a,b) {
-		var tda = $(a).find('td:eq(1)').text();
-		var tdb = $(b).find('td:eq(1)').text();
+			return tda > tdb ? 1
+				: tda < tdb ? -1
+				: 0;
+		}).appendTo($tbody);	
+	} else {
+		var $tbody = $('table tbody');
+		$tbody.find('tr').sort(function(a,b) {
+			var tda = $(a).find('td:eq(1)').text();
+			var tdb = $(b).find('td:eq(1)').text();
 		
-		return tda < tdb ? 1
-			: tda > tdb ? -1
-			: 0;
-	}).appendTo($tbody);
-}
+			return tda < tdb ? 1
+				: tda > tdb ? -1
+				: 0;
+		}).appendTo($tbody);	
+	}
+};
 
-function search() {
+var search = function() {
     var input, filter, table, tr, td, i, txtValue, searchValue, searchOptions, rowCount;
 
     input = document.getElementById("searchbar");
