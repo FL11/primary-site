@@ -131,13 +131,14 @@ footer {
 table {
 	border-collapse: collapse;
 	width: 100%;
+	table-layout: fixed;
 }
 
 table tr td {
 	padding: 13px 40px;
 }
 
-table th {
+table .header th {
 	background-color: #e87f13;
 	text-align: center;
 	font-weight: bold;
