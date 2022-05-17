@@ -4,7 +4,7 @@
         <title>List of Black MIDIs</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="styles.css" />
-        <script src="js/jquery/jquery-1.4.2.min.js"></script>
+        <script src="https://fl11.github.io/primary-site/js/jquery/jquery-1.4.2.min.js"></script>
     </head>
     <body onload="mapDataToHtmlTable()">
 		<script type="text/javascript" src="js/midi_data.js"></script>
@@ -19,24 +19,22 @@
         </div>
         <div id="main">
             <h4>All of my works</h4>
-			<p>In this page, you will find all of the Black MIDIs I have created, and their respective video links on my own YouTube channel.</p>
+			<p>In this page, you will find all of the Black MIDIs I have created, and their respective video links on my own YouTube channel.<br><b><i>Don't want to scroll through this entire page? I made some options below for you to experiment with :)</i></b></p>
 			<p>(No download links, of course. I keep them private due to some reasons. :P)</p>
-			<div class="items" style="color:#e87f13">
-				<div id="arrayLength" style='font-size:14pt;font-weight:bold;float:left'></div>
-				<select id="sortoptions">
-					<option value="none" onclick="mapDataToHtmlTable()">No particular order</option>
-					<option value="titleA" onclick="TitleAsc()">Title (Ascending order)</option>
-					<option value="titleB" onclick="TitleDesc()">Title (Descending order)</option>
-					<option value="artistA" onclick="ArtistAsc()">Artist (Ascending order)</option>
-					<option value="artistB" onclick="ArtistDesc()">Artist (Descending order)</option>
-					<option value="notesA" onclick="noteCountAsc()">Note count (Smallest to largest)</option>
-					<option value="notesB" onclick="noteCountDesc()">Note count (Largest to smallest)</option>
-				</select>
+			<br>
+			<div class="items" style="color:#e87f13;">
+				<label for="descOrder" style="float:right;margin-top:4px;color:white;margin-right:15px;">Descending order</label>
+				<input type="checkbox" id="descending" style="float:right;margin-top:4px;margin-right:7px;color:white;width:15px;height:15px;background-color:#2d2d2d;cursor:pointer;margin-left:8px;" name="descOrder">
+				<div id="sortbuttons" style="float:right">
+					<button id="sortbutton" style="margin-right:5px;padding:4px 30px;" onclick="sortByTitle()">Title</button>
+					<button id="sortbutton" style="margin-right:5px;padding:4px 27px;" onclick="sortByArtistName()">Artist</button>
+					<button id="sortbutton" style="margin-right:5px;padding:4px 12px;" onclick="sortByCount()">Note count</button>
+				</div>
 				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
-				<input type="text" id="searchbar" placeholder="Enter keywords..." onkeyup="search()"/>
+				<input type="text" id="searchbar" placeholder="Enter keywords..." onkeyup="search()" style="width:220px" />
 				<select id="searchoptions" style="margin-right:10px">
 					<option>Search by title</option>
-					<option>Search by artist</option>
+					<option>Search by artist name</option>
 				</select>
 				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Search:</b></span>
 			</div>
@@ -50,4 +48,4 @@
 		</div>
 		<footer>Copyright &copy; 2022 reymundokun</footer>
     </body>
-    <html>
+<html>
