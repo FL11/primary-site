@@ -56,15 +56,13 @@ function mapDataToHtmlTable() {
 		tableElement += '<tr>';
 		tableElement += '<td><b>' + midis[index].name + '</b></td>';
 		tableElement += '<td>' + midis[index].artist + '</td>';
-		tableElement += '<td>' + parseInt(midis[index].note_count) + '</td>';
+		tableElement += '<td>' + parseInt(midis[index].note_count).toLocaleString() + '</td>';
 		tableElement += '<td>' + midis[index].collab + '</td>';
 		tableElement += '<td>' + midis[index].video_url + '</td>';
 		tableElement += '</tr>'
 	})
 	
 	tableElement += '</tbody></table>';
-	const h6 = document.getElementById('arrayLength');
-	h6.innerHTML = `${midis.length} items in list`;
 	document.getElementById('tableSection').innerHTML = tableElement;
 }
 
@@ -141,14 +139,14 @@ function ArtistDesc() {
 }
 
 function search() {
-    var input, filter, table, tr, td, i, txtValue, searchOptions;
+    var input, filter, table, tr, td, i, txtValue, searchValue, searchOptions, rowCount;
 
     input = document.getElementById("searchbar");
     filter = input.value.toUpperCase();
     table = document.getElementById("mytable");
     tr = table.getElementsByTagName("tr");
     searchOptions = document.getElementById('searchoptions');
-    var searchValue = searchOptions.selectedIndex;
+    searchValue = searchOptions.selectedIndex;
 
     if (searchValue == 0) {
         for (i = 0; i < tr.length; i++) {
