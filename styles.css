@@ -4,6 +4,11 @@
 	to {background-color:#cc6600;}
 }
 
+@-webkit-keyframes fadetoblack {
+	from {background-color: #2d2d2d;}
+	to {background-color:#000000;}
+}
+
 html {
 	margin: 0;
 	background-color: #2d2d2d;
@@ -81,6 +86,13 @@ h4 {
 	font-weight: bold;
 }
 
+h5 {
+	color: #f1881b;
+	font-size: 26pt;
+	line-height: 1px;
+	font-weight: bold;
+}
+
 a {
 	color: #e87f13;
 }
@@ -116,14 +128,20 @@ footer {
     text-align: center;
 }
 
-table tr td {
-	padding: 13px 55px;
+table {
+	border-collapse: collapse;
+	width: 100%;
 }
 
-table tr:first-child {
+table tr td {
+	padding: 13px 40px;
+}
+
+table th {
 	background-color: #e87f13;
 	text-align: center;
 	font-weight: bold;
+	padding: 13px 40px;
 }
 
 table tr:nth-child(even) {
@@ -195,4 +213,20 @@ table tr:nth-child(even) {
 	color: white;
 	padding: 10px;
 	-webkit-border-radius: 16px;
+}
+
+#overview {
+	width:150px;
+	height:200px;
+	float:right;
+}
+
+#searchbar, #sortoptions, #searchoptions {
+	background-color: #2d2d2d;
+	padding: 4px 5px;
+	color: white;
+	font-family: Arial;
+	float: right;
+	border: 1px solid #e87f13;
+	-webkit-border-radius: 5px;
 }

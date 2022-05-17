@@ -4,10 +4,11 @@
         <title>List of Black MIDIs</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="styles.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
-        <script src="date.js"></script>
+		<link rel="stylesheet" href="required_libraries/fontawesome-free-6.1.1-web/css/fontawesome.css" />
+        <script src="required_libraries/jquery-1.4.2.min.js"></script>
     </head>
-    <body>
+    <body onload="mapDataToHtmlTable()">
+		<script type="text/javascript" src="js/midi_data.js"></script>
         <div id="header">
             <div id="headerimg"><img src="src/header.png" style="height:50px;"></div>
             <ul>
@@ -21,65 +22,27 @@
             <h4>All of my works</h4>
 			<p>In this page, you will find all of the Black MIDIs I have created, and their respective video links on my own YouTube channel.</p>
 			<p>(No download links, of course. I keep them private due to some reasons. :P)</p>
-			
-			<table cellspacing="0">
-			    <tr>
-				    <td>Title</td>
-					<td>Artist(s)</td>
-					<td>Notes</td>
-					<td>Collaborators</rd>
-					<td>Video links</td>
-				</tr>
-				<tr>
-				    <td>The Piano</td>
-					<td>unknown</td>
-					<td>23,000</td>
-					<td></td>
-					<td><a href="https://www.youtube.com/watch?v=JtZbgBHNRpA">Click here</a></td>
-				</tr>
-				<tr>
-				    <td>Uchiage Hanabi</td>
-					<td>DAOKO x Kenshi Yonezu</td>
-					<td>200,000</td>
-					<td>29FroilanJR</td>
-					<td><a href="https://www.youtube.com/watch?v=G7lPWdfbodk">Click here</a></td>
-				</tr>
-				<tr>
-				    <td>Brand New World ('D4DJ First Mix' Ep. 10 Insert Song)</td>
-					<td>Happy Around!</td>
-					<td>50,000</td>
-					<td></td>
-					<td><a href="https://www.youtube.com/watch?v=JYqCcJxh8Dg">Click here</a></td>
-				</tr>
-				<tr>
-				    <td>FIRE BIRD</td>
-					<td>Roselia</td>
-					<td>166,000</td>
-					<td></td>
-					<td><a href="https://www.youtube.com/watch?v=eIB41bIcUhY">Click here</a></td>
-				</tr>
-				<tr>
-				    <td>The Rumbling</td>
-					<td>SiM</td>
-					<td>90,000</td>
-					<td>OddPandemonium03</td>
-					<td>nothing at the moment</td>
-				</tr>
-				<tr>
-				    <td>Sore wa Bokutachi no Kiseki</td>
-					<td>µ's</td>
-					<td>47,000</td>
-					<td></td>
-					<td><a href="https://www.youtube.com/watch?v=z96D_XvRA1o">Click here</a></td>
-				</tr>
-				<tr>
-				    <td>Susume&rarr;Tomorrow</td>
-					<td>Nitta Emi, Uchida Aya, Mimori Suzuko</td>
-					<td>41,000</td>
-					<td></td>
-					<td><a href="https://www.youtube.com/watch?v=D9g3R1swA6I">Click here</a></td>
-				</tr>
-			</table>
+			<div class="items" style="color:#e87f13">
+				<div id="arrayLength" style='font-size:14pt;font-weight:bold;float:left'></div>
+				<select id="sortoptions">
+					<option value="none" onclick="mapDataToHtmlTable()">No particular order</option>
+					<option value="titleA" onclick="TitleAsc()">Title (Ascending order)</option>
+					<option value="titleB" onclick="TitleDesc()">Title (Descending order)</option>
+					<option value="artistA" onclick="ArtistAsc()">Artist (Ascending order)</option>
+					<option value="artistB" onclick="ArtistDesc()">Artist (Descending order)</option>
+					<option value="notesA" onclick="noteCountAsc()">Note count (Smallest to largest)</option>
+					<option value="notesB" onclick="noteCountDesc()">Note count (Largest to smallest)</option>
+				</select>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
+				<input type="text" id="searchbar" placeholder="Enter keywords..." onkeyup="search()"/>
+				<select id="searchoptions">
+					<option value="byTitle">Search by title</option>
+					<option value="byArtist">Search by artist</option>
+				</select>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Search:</b></span>
+			</div>
+			<br><br>
+			<div id="tableSection"></div>
 			<h4>Unfinished MIDIs</h4>
 		    <p>Click on the button below to view all of the MIDIs I'm currently working on. This opens a new tab in your browser and takes you to a Google Sheets spreadsheet.</p>
 			<div id="btn">
