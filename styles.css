@@ -1,4 +1,4 @@
-/* some gool fade animations */
+/* some gool animations */
 @-webkit-keyframes fade {
 	from {background-color: #2d2d2d;}
 	to {background-color:#cc6600;}
@@ -7,6 +7,15 @@
 @-webkit-keyframes fadetoblack {
 	from {background-color: #2d2d2d;}
 	to {background-color:#000000;}
+}
+
+@-webkit-keyframes animationname {
+  0%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
 }
 
 html {
@@ -28,6 +37,7 @@ html {
 	display: flex;
 	overflow: hidden;
 	font-size: 12pt;
+	text-align: right;
 	font-weight: bold;
 	-webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
@@ -40,7 +50,6 @@ html {
 #header ul {
 	list-style-type: none;
 	margin: 0;
-	
 	height: auto;
 	overflow: hidden;
 }
@@ -222,7 +231,7 @@ table tr:nth-child(even) {
 	float:right;
 }
 
-#searchbar, #sortoptions, #searchoptions {
+#searchoptions, #searchbar {
 	background-color: #2d2d2d;
 	padding: 4px 5px;
 	color: white;
@@ -230,4 +239,22 @@ table tr:nth-child(even) {
 	float: right;
 	border: 1px solid #e87f13;
 	-webkit-border-radius: 5px;
+}
+
+#sortbutton {
+	background-color: #cc6600;
+	border: 1px solid #cc6600;
+	font-family: Arial;
+	-webkit-border-radius: 5px;
+	color: white;
+}
+
+#sortbutton:active {
+	background-color:#2d2d2d;
+}
+
+p { line-height: 1.4em; }
+
+#descending:input checked {
+	background-color: #cc7700
 }
