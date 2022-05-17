@@ -1,5 +1,5 @@
 var mapDataToHtmlTable = function() {
-	var tableElement = '<table cellspacing="0" id="mytable"><thead class="header"><th style="width:36vh">Title</th><th style="width:32vh">Artist(s)</th><th>Notes</th><th>Collaborators</th><th>Video links</th></thead><tbody>';
+	var tableElement = '<table cellspacing="0" id="mytable"><thead class="header"><th style="width:34vh">Title</th><th style="width:28vh">Artist(s)</th><th>Notes</th><th>Collaborators</th><th>Video links</th></thead><tbody>';
 	var table = document.getElementById('mytable');
 	
 	var midis = [{
