@@ -24,7 +24,7 @@ html {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 }
 
 #header {
