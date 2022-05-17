@@ -148,43 +148,6 @@ function search() {
     table = document.getElementById("mytable");
     tr = table.getElementsByTagName("tr");
     searchOptions = document.getElementById('searchoptions');
-    var searchBy = searchOptions.options[searchOptions.selectedIndex].value;
-
-    if (searchBy == "byTitle") {
-        for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    } else if (searchBy == "byArtist") {
-        for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[1];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
-            }
-        }
-    }
-}
-
-function search() {
-    var input, filter, table, tr, td, i, txtValue, searchOptions;
-
-    input = document.getElementById("searchbar");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("mytable");
-    tr = table.getElementsByTagName("tr");
-    searchOptions = document.getElementById('searchoptions');
     var searchValue = searchOptions.selectedIndex;
 
     if (searchValue == 0) {
