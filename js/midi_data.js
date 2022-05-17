@@ -56,7 +56,7 @@ function mapDataToHtmlTable() {
 		tableElement += '<tr>';
 		tableElement += '<td><b>' + midis[index].name + '</b></td>';
 		tableElement += '<td>' + midis[index].artist + '</td>';
-		tableElement += '<td>' + midis[index].note_count + '</td>';
+		tableElement += '<td align="center">' + midis[index].note_count + '</td>';
 		tableElement += '<td>' + midis[index].collab + '</td>';
 		tableElement += '<td>' + midis[index].video_url + '</td>';
 		tableElement += '</tr>'
