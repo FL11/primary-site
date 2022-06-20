@@ -50,6 +50,13 @@ var mapDataToHtmlTable = function() {
 		"note_count": "41000",
 		"collab": "",
 		"video_url": "<a href='https://www.youtube.com/watch?v=D9g3R1swA6I'>Click here</a>"
+	},
+	{
+		"name": "ROZEN HORIZON",
+		"artist": "Roselia",
+		"note_count": "159000",
+		"collab": "",
+		"video_url": "<a href='https://www.youtube.com/watch?v=lPkdKY1TPo4'>Click here</a>"
 	}];
 	
 	midis.forEach((item, index) => {
