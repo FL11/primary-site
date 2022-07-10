@@ -24,7 +24,7 @@ html {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	font-family: Arial, sans-serif;
+	font-family: Arial;
 }
 
 #header {
@@ -242,15 +242,16 @@ table tr:nth-child(even) {
 }
 
 #sortbutton {
-	background-color: #cc6600;
+	background-color: #2d2d2d;
 	border: 1px solid #cc6600;
 	font-family: Arial;
 	-webkit-border-radius: 5px;
 	color: white;
+	width: 120px;
 }
 
 #sortbutton:active {
-	background-color:#2d2d2d;
+	background-color:#cc6600;
 }
 
 p { line-height: 1.4em; }

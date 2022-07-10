@@ -1,5 +1,24 @@
+function switchOptions() {
+  var sort_option = document.getElementById('sortbutton').innerHTML;
+  
+  switch(sort_option) {
+	case 'Title':
+	  sortByArtistName();
+	  document.getElementById('sortbutton').innerHTML = 'Artist';
+	  break;
+	case 'Artist':
+	  sortByCount();
+	  document.getElementById('sortbutton').innerHTML = 'Note count';
+	  break;
+	case 'Note count':
+	  sortByTitle();
+	  document.getElementById('sortbutton').innerHTML = 'Title';
+	  break;
+  }
+}
+
 var mapDataToHtmlTable = function() {
-	var tableElement = '<table cellspacing="0" id="mytable"><thead class="header"><th style="width:34vh">Title</th><th style="width:28vh">Artist(s)</th><th>Notes</th><th>Collaborators</th><th>Video links</th></thead><tbody>';
+	var tableElement = '<table cellspacing="0" id="mytable"><thead class="header"><th style="width:36vh">Title</th><th style="width:32vh">Artist(s)</th><th>Notes</th><th>Collaborators</th><th>Video links</th></thead><tbody>';
 	var table = document.getElementById('mytable');
 	
 	var midis = [{
