@@ -5,7 +5,39 @@
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="styles.css" />
 		<link rel="stylesheet" href="./libraries/fontawesome-free-6.1.1-web/css/fontawesome.min.css">
-        <script src="date.js"></script>
+		<style type='text/css'>
+		@-webkit-keyframes changecolor {
+		    from { background-color: #cc6600; }
+			to { background-color: #e87f13; } 
+		}
+		
+		@keyframes changecolor {
+		    from { background-color: #cc6600; }
+			to { background-color: #e99f13; } 
+		}
+		
+		button {
+		    display: block;
+			margin: 0 auto;
+			background-color: #cc6600;
+			border: 0;
+			padding: 20px;
+			-webkit-border-radius: 15px;
+			border-radius: 15px;
+			font-family: Arial;
+			font-size: 20pt;
+			color: white;
+		}
+		
+		button:hover {
+		    animation-name: changecolor;
+			animation-duration: 0.2s;
+			animation-fill-mode: forwards;
+			-webkit-animation-name: changecolor;
+			-webkit-animation-duration: 0.2s;
+			-webkit-animation-fill-mode: forwards;
+		}
+		</style>
     </head>
     <body>
 	    <div id="header" style="height:50px;">
@@ -14,9 +46,9 @@
                 <li></li>
             </ul>
         </div>
-        <div id="main">
 		  <h5 style="text-align:center;font-size:96pt;margin-bottom:100px">404</h5>
 		  <p style="text-align:center">This page doesn't exist. Maybe try looking around other places for the meanwhile?</p>
-		</div>
+		  <br>
+		  <button onclick='window.location.assign("index.html")'>Back to home</button>
     </body>
     <html>

@@ -5,7 +5,7 @@
 }
 
 @-webkit-keyframes fadetoblack {
-	from {background-color: #2d2d2d;}
+	from {background-color: #1c1c1c;}
 	to {background-color:#000000;}
 }
 
@@ -18,13 +18,63 @@
   }
 }
 
+@-webkit-keyframes slideLeft {
+	from {bottom:50px; opacity:0} 
+	to {bottom:0; opacity:1}
+}
+
+@keyframes slideLeft {
+	from {transform: translateX(10vw); opacity:0} 
+	to {transform:translateX(0); opacity:1}
+}
+
+@keyframes spin {
+	0% {transform: rotate(0deg);} 
+	100% {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes flyIn {
+	from {bottom:-50px; opacity:0} 
+	to {bottom:0; opacity:1}
+}
+
+@keyframes flyIn {
+	from {right:-50px; opacity:0} 
+	to {right:0; opacity:1}
+}
+
+@-webkit-keyframes fadeIn {
+	from {opacity:0} 
+	to {opacity:1}
+}
+
+@keyframes fadeIn {
+	from {opacity:0} 
+	to {opacity:1}
+}
+
+/* styles */
+.page_content {
+	position: relative;
+	animation-name: flyIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: flyIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+}
+
 html {
-	margin: 0;
 	background-color: #2d2d2d;
 	color: white;
 	display: flex;
 	flex-direction: column;
 	font-family: Arial;
+}
+
+body {
+	margin: 0;
+	padding: 0;
 }
 
 #header {
@@ -34,12 +84,18 @@ html {
 	z-index: 1000;
 	width: 100%;
 	background-color: #e87f13;
-	display: flex;
+	display: none;
 	overflow: hidden;
 	font-size: 12pt;
 	text-align: right;
 	font-weight: bold;
 	-webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+	animation-name: fadeIn;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.2s;
+	-webkit-animation-fill-mode: forwards;
 }
 
 #headerimg {  
@@ -74,8 +130,70 @@ a:hover {
 }
 
 #main {
-	margin: 30px;
+	margin: 0 auto;
+	display: none;
 	min-height: 100%;
+}
+
+#intro {
+	background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+	display: none;
+	margin-top: 50px;
+	transform: skewY(4deg);
+	height: 500px;
+	margin: 0;
+	padding: 0;
+}
+
+#color2 {
+	background-color: white;
+	transform: skewY(-3deg);
+	z-index: -1000;
+	height: 100px;
+	margin-top: -90px;
+	display: none;
+}
+
+#introtext {
+    margin-top: 70px;
+	margin-left: 34px;
+	float: left;
+	z-index: 1;
+	padding: 30px;
+}
+
+.card-transition {
+	display: flex;
+	position: relative;
+	animation-name: slideLeft;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+    -webkit-animation-name: slideLeft;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.card {
+	width: 250px;
+	background-color: #1c1c1c;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	padding: 30px;
+	margin-right: 10px;
+	text-align: center;
+	transition: transform ease 200ms;
+	
+}
+
+.card:hover {
+	/* animation-name: fadetoblack, moveUp;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+    -webkit-animation-name: fadetoblack, moveUp;
+	-webkit-animation-duration: 0.3s;
+	-webkit-animation-fill-mode: forwards;*/
+	transform: translate(0, -10px);
 }
 
 
@@ -93,6 +211,7 @@ h4 {
 	font-size: 32pt;
 	line-height: 1px;
 	font-weight: bold;
+	text-align: center;
 }
 
 h5 {
@@ -131,6 +250,7 @@ footer {
 	background-color: #333;
 	color: #fff;
 	padding: 20px;
+	display: none;
 }
 
 .chatwidget {
@@ -197,6 +317,9 @@ table tr:nth-child(even) {
 
 .cards {
 	display: flex;
+	animation-name: moveUp;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
 }
 
 #card_element {
@@ -258,4 +381,80 @@ p { line-height: 1.4em; }
 
 #descending:input checked {
 	background-color: #cc7700
+}
+
+#loader {
+    left: 50%;
+	top: 50%;
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	margin: -72px 0 0 -72px;
+	z-index: 1;
+	border: 20px solid #ffa500;
+	border-top: 20px solid #2d2d2d;
+	border-radius: 100%;
+	animation: spin 1.5s linear infinite;
+	-webkit-animation: spin 1.5s linear infinite;
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.85);
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: none;
+	position: fixed;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
+
+.modal-cont {
+	display: block;
+	padding: 3px;
+	width: 60%;
+	margin: 15% auto;
+	-webkit-animation: slideDown;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	animation: slideDown;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	position: relative;
+}
+
+#modal-header {
+	background-color: #cc7700;
+	padding: 3px;
+	-webkit-border-top-left-radius: 14px;
+	-webkit-border-top-right-radius: 14px;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+	font-size: 16pt;
+}
+
+#modal-content {
+	background-color: #4b4b4b;
+	padding: 20px;
+	margin-top: 0 auto;
+	-webkit-border-bottom-left-radius: 14px;
+	-webkit-border-bottom-right-radius: 14px;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+}
+
+.close:hover {
+	cursor: pointer;
+	color: black;
+}
+
+@-webkit-keyframes slideDown {
+	from { bottom:30px; opacity:0 }
+	to { bottom:0; opacity:1 }
+}
+
+@keyframes slideDown {
+	from { bottom:30px; opacity:0 }
+	to { bottom:0; opacity:1 }
 }

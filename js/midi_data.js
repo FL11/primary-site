@@ -203,3 +203,7 @@ var search = function() {
         }
     }
 }
+
+function showModal() {
+	document.getElementById('whyPrivate').style.display = 'block';
+}

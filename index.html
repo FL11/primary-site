@@ -6,8 +6,9 @@
         <link rel="stylesheet" href="styles.css" />
         <script src="date.js"></script>
     </head>
-    <body>
-        <div id="header">
+    <body onload="delay()">
+        <script src="js/load.js"></script>
+        <div id="header" class="page_content">
             <div id="headerimg"><img src="src/header.png" style="height:50px;"></div>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -16,43 +17,51 @@
                 <li><a href="info.html">More info</a></li>
             </ul>
         </div>
-        <div id="main">
-        <div id="intro">
-            <img src="src/left_image.png" style="float:left;width:235px;height:235px;padding:4px 40px;">
-	    <h4>All about myself</h4>
+        <div id="loader"></div>
+        <div id="introtext" class="page_content" style="display:none">
+            <img src="src/left_image.png" style="float:right;width:300px;height:300px;padding:4px 40px;">
+            <b style="font-size:50px;">A few info about myself</b>
             <p>Hello! I am Reymundo (aka "reymundokun"). I'll place a picture of Honoka from Love Live! in here (and some other areas in this site) because I don't want to show my face brrrrrrrr<br><br>I'm 16 years old, from the Philippines, a high school student, and a member of the <b>Philippine Black MIDI Team (PBMT)</b> since March 2022. I have joined the Black MIDI Community last 2021, and up until this moment, I'm trying my best to improve my blacking skills <del>(but I don't think I'm improving that much :P).</del></p>
             <p>I have already done 6 Black MIDIs (as of the time of this writing); 5 of these are opening and ending themes from my favorite anime series and films. This music genre came to my interest back in 2019, but started to make MIDIs just last year, few months before I join the BMC. I haven't played or encountered any musical instruments, but I have some knowledge about music theory.</p>
         </div>
-		<br>
-		<h4>My personal hobbies</h4>
-		<p>I love doing almost a lot of things, including:</p>
-		<ul>
-		    <li>Building webpages from scratch, not based from any other templates (In fact, this website is also made out of my own hands, from scratch. Pretty obvious, right?)</li>
-			<li>Learning various programming languages</li>
-			<li>Video editing</li>
-			<li>Sleeping more than 8 hours a day <del>(no joke lol)</del></li>
-			<li>...and of course, not gonna forget this on the list: creating Black MIDIs. :D</li>
-		</ul>
-		<h3>Curious about what Black MIDIs are? Continue reading on.</h3>
-		<h4>Black MIDIs: what are they?</h4>
-        <p>According to the <a href="https://blackmidi.fandom.com/wiki/Home">Black MIDI Wiki</a>:</p>
-        <div class="flex-container">
-            <div class="flex-child element1">
-                <img src="src/pfa_snapshot.PNG" style="width:600px;height:400px;" title="An example of a Black MIDI, played in Piano from Above"/>
+        <div id="intro" class="page_content"></div>
+		<div id="color2" class="page_content"></div>
+        <div id="main" class="page_content">
+            <h4>My personal hobbies</h4>
+            <p>I love doing almost a lot of things, including:</p>
+            <div id="cards" class="card-transition">
+                <div class="card" style="background-color:rgba(173, 216, 230, 0.4)">
+                    <img src="https://www.iconsdb.com/icons/preview/white/code-xxl.png" style="width:150px;height:150px;display:block;margin:0 auto"/><br>
+                    <b>Building webpages from scratch</b><br><br>
+                    <h6 style="margin:0;">(in fact, this site is not using any other templates as a base, that's the truth.)</h6>
+                </div>
+                <div class="card" style="background-color:rgba(255, 255, 0, 0.4)">
+                    <img src="https://www.iconsdb.com/icons/preview/white/sleeping-xxl.png" style="width:130px;height:130px;display:block;margin:0 auto"/><br><br>
+                    <b>Sleeping for more than 8 hours a day <del>(I mean it lol)</del></b>
+                </div>
+                <div class="card" style="background-color:rgba(50, 205, 50, 0.4)">
+                    <img src="https://www.iconsdb.com/icons/preview/white/video-play-xxl.png" style="width:130px;height:130px;display:block;margin:0 auto"/><br><br>
+                    <b>Improving my video editing skills</b>
+                </div>
+                <div class="card" style="background-color:rgba(255, 192, 203, 0.4)">
+                    <img src="https://www.iconsdb.com/icons/preview/white/music-2-xxl.png" style="width:130px;height:130px;display:block;margin:0 auto"/><br><br>
+                    <b>Doing Black MIDIs, although with not really good results sometimes :(</b>
+                </div>
             </div>
-            <div class="flex-child element2">
-                <p style="font-size:16pt;"><i>A blackened musical notation, also called a Black MIDI, black score and black sheet (Japanese: 黒楽譜, くろがくふ, Kuro Gakufu, literally "black sheet music") eponymously is a transcription of music that uses Musical Instrumental Digital Interface files, or MIDI files, to compose an incredibly and impossibly large number of notes. It is usually done by filling up the sheet with many thousands or millions of abnormally short notes—from 32nd notes and smaller. A completed black MIDI will look like a recklessly colored and scribbled drawing on ruled paper. Most blackened songs are remixes from existing songs, although there are a few original compositions floating around the Internet. The word 'black' in 'Black MIDI' refers to the notation's appearance of a certain blackened song, which one can obviously tell why it is a "black" MIDI.</i></p>
+            <h3>Wait, did I just mention Black MIDIs? Curious what they are? Continue reading on.</h3>
+            <h4>Black MIDIs: what are they?</h4>
+            <p>According to the <a href="https://blackmidi.fandom.com/wiki/Home">Black MIDI Wiki</a>:</p>
+            <div class="flex-container" class="card-transition">
+                <div class="flex-child element1">
+                    <img src="src/pfa_snapshot.PNG" style="width:600px;height:400px;"/>
+                </div>
+                <div class="flex-child element2">
+                    <p style="font-size:14pt;"><i>A blackened musical notation, also called a Black MIDI, black score and black sheet (Japanese: 黒楽譜, くろがくふ, Kuro Gakufu, literally "black sheet music") eponymously is a transcription of music that uses Musical Instrumental Digital Interface files, or MIDI files, to compose an incredibly and impossibly large number of notes. It is usually done by filling up the sheet with many thousands or millions of abnormally short notes—from 32nd notes and smaller. A completed black MIDI will look like a recklessly colored and scribbled drawing on ruled paper. Most blackened songs are remixes from existing songs, although there are a few original compositions floating around the Internet. The word 'black' in 'Black MIDI' refers to the notation's appearance of a certain blackened song, which one can obviously tell why it is a "black" MIDI.</i></p>
+                </div>
             </div>
+			<h4>Compilation of my Black MIDIs</h4>
+            <iframe style="width:100%;height:800px;" src="https://www.youtube.com/embed/videoseries?list=PLjzb0UxHSujPZCvZEDFsgTejX3kHe6MBX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-	<h4>My works</h4>
-	<p>These can be viewed by heading to "My Black MIDIs" on the top portion of this website.</p>
-	<h4>Discord server: a sneak peek</h4>
-	<p>* powered by <a href="https://widgetbot.io/">WidgetBot</a></p>
-	<div class="chatwidget">
-	    <widgetbot server="897431913751543848" channel="897434031984115712" width="1100" height="600"></widgetbot>
-            <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-	</div>
-	</div>
-	<footer>Copyright &copy; 2022 reymundokun</footer>
+        <footer>Copyright &copy; 2022 reymundokun</footer>
     </body>
     <html>

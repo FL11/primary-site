@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>(in development) reymundokun's Official Website</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="styles.css" />
+      <script src="date.js"></script>
+   </head>
+   <body onload="delay()">
+      <script src="js/load.js"></script>
+      <div id="header" class="page_content">
+         <div id="headerimg"><img src="src/header.png" style="height:50px;"></div>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="black_midis.html">My Black MIDIs</a></li>
+            <li><a href="info.html">More info</a></li>
+         </ul>
+      </div>
+      <div id="loader"></div>
+      <div id="main" class="page_content">
+        <h4>All of my works</h4>
+			<p>In this page, you will find all of the Black MIDIs I have created, and their respective video links on my own YouTube channel.<br>(No download links, of course. I keep them private due to some reasons. :P)</p>
+			<p><b><i>Don't want to scroll through this entire page? Feel free to play around with the search options below :)</i></b></p>
+			<br>
+			<div class="items" style="color:#e87f13;">
+				<label for="descOrder" style="float:right;margin-top:4px;color:white;margin-right:15px;">Reverse listing order</label>
+				<input type="checkbox" id="descending" style="float:right;margin-top:4px;margin-right:7px;color:white;width:15px;height:15px;background-color:#2d2d2d;cursor:pointer;margin-left:8px;" name="descOrder">
+				<div id="sortbuttons" style="float:right">
+					<button id="sortbutton" style="margin-right:5px;padding:5px" onclick="switchOptions()">Title</button>
+				</div>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
+				<input type="text" id="searchbar" placeholder="Enter keywords..." onkeyup="search()" style="width:220px" />
+				<select id="searchoptions" style="margin-right:10px">
+					<option>Search by title</option>
+					<option>Search by artist name</option>
+				</select>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Search:</b></span>
+			</div>
+			<br><br>
+			<div id="tableSection"></div>
+			<h4>Unfinished MIDIs</h4>
+		    <p>Click on the button below to view all of the MIDIs I'm currently working on. This opens a new tab in your browser and takes you to a Google Sheets spreadsheet.</p>
+			<div id="btn">
+			  <button id="sheets" onclick="window.open('https://docs.google.com/spreadsheets/d/15kBIL_hKLm9XrVX2J3RC_ehXGvW6Iy9i', '_blank');">View list</button>
+			</div>
+      </div>
+      <footer>Copyright &copy; 2022 reymundokun</footer>
+   </body>
+   <html>
