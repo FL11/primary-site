@@ -1,7 +1,7 @@
 var unnamed;
 
 function delay() {
-	unnamed = setTimeout(PageContent, 800);
+	unnamed = setTimeout(PageContent, 250);
 }
 
 function PageContent() {
