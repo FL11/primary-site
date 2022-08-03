@@ -26,28 +26,28 @@ var mapDataToHtmlTable = function() {
 		"artist": "unknown composer",
 		"note_count": "23000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=JtZbgBHNRpA'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=JtZbgBHNRpA'>YouTube link</a>"
 	},
 	{
 		"name": "Uchiage Hanabi",
 		"artist": "DAOKO x Kenshi Yonezu",
 		"note_count": "200000",
 		"collab": "29FroilanJR",
-		"video_url": "<a href='https://www.youtube.com/watch?v=G7lPWdfbodk'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=G7lPWdfbodk'>YouTube link</a>"
 	},
 	{
 		"name": "Brand New World <br><i style='font-size:10pt;'>('D4DJ First Mix' Ep. 10 Insert Song)</i>",
 		"artist": "Happy Around!",
 		"note_count": "50000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=JYqCcJxh8Dg'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=JYqCcJxh8Dg'>YouTube link</a>"
 	},
 	{
 		"name": "FIRE BIRD",
 		"artist": "Roselia",
 		"note_count": "166000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=eIB41bIcUhY'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=eIB41bIcUhY'>YouTube link</a>"
 	},
 	{
 		"name": "The Rumbling",
@@ -61,21 +61,28 @@ var mapDataToHtmlTable = function() {
 		"artist": "µ's",
 		"note_count": "47000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=z96D_XvRA1o'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=z96D_XvRA1o'>YouTube link</a>"
 	},
 	{
 		"name": "Susume→Tomorrow",
 		"artist": "Nitta Emi, Uchida Aya, Mimori Suzuko",
 		"note_count": "41000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=D9g3R1swA6I'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=D9g3R1swA6I'>YouTube link</a>"
 	},
 	{
 		"name": "ROZEN HORIZON",
 		"artist": "Roselia",
 		"note_count": "159000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=lPkdKY1TPo4'>Click here</a>"
+		"video_url": "<a href='https://www.youtube.com/watch?v=lPkdKY1TPo4'>YouTube link</a>"
+	},
+	{
+		"name": "Dekoboko<br><i style='font-size:10pt'>(TV Size)</i>",
+		"artist": "Kiyoe Yoshioka",
+		"note_count": "39000",
+		"collab": "",
+		"video_url": "<a href='https://www.youtube.com/watch?v=0AJLgs6IFpM'>YouTube link</a>"
 	}];
 	
 	midis.forEach((item, index) => {
