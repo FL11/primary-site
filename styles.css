@@ -149,22 +149,13 @@ a:hover {
 }
 
 #intro {
-    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 98.9%);
+    background: linear-gradient(109.6deg, rgb(33, 31, 31) 11.2%, rgba(0, 0, 0, 0.93) 98.9%);
 	display: none;
 	margin-top: 50px;
-	height: 510px;
+	height: 400px;
 	margin: 0;
 	padding: 0;
 }
-
-/*#color2 {
-	background-color: white;
-	transform: skewY(-3deg);
-	z-index: -1000;
-	height: 110px;
-	margin-top: -90px;
-	display: none;
-}*/
 
 #introtext {
     margin-top: 80px;
@@ -174,6 +165,16 @@ a:hover {
 	padding: 30px;
 	width:60%;
 }
+
+
+/*#color2 {
+	background-color: white;
+	transform: skewY(-3deg);
+	z-index: -1000;
+	height: 110px;
+	margin-top: -90px;
+	display: none;
+}*/
 
 .card-transition {
 	display: flex;
