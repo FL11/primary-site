@@ -7,19 +7,21 @@
 		<link rel="stylesheet" href="./libraries/fontawesome-free-6.1.1-web/css/fontawesome.min.css">
         <script src="date.js"></script>
     </head>
-    <body>
+    <body onload="delay()">
         <div id="header">
-            <div id="headerimg"><img src="src/header.png" style="height:50px;"></div>
+            <div id="headerimg"><img src="src/header.png" style="height:50px;" onclick="window.open('./index.html')"></div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="black_midis.html">My Black MIDIs</a></li>
+                <li><a href="black_midis.html">Compilation of my works</a></li>
                 <li><a href="#">More info</a></li>
             </ul>
         </div>
-        <div id="main">
+		<div id="loader"></div>
+		<script src="js/load.js"></script>
+        <div id="main" class="page_content">
 		    <div class="under_const">
-			    <p>&nbsp;&#xf013;&nbsp;&nbsp;This page is currently under construction.</p>
+			    <p>&nbsp;This page is currently under construction.</p>
 			</div>
             <h4>Some other information</h4>
 			<p>Want to know more? This is the right place.</p>

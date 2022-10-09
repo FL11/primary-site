@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>List of Black MIDIs</title>
+        <title>Compilation of my works</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="styles.css" />
         <script src="https://fl11.github.io/primary-site/js/jquery/jquery-1.4.2.min.js"></script>
@@ -9,11 +9,12 @@
     <body onload="delay();mapDataToHtmlTable()">
 		<script type="text/javascript" src="js/midi_data.js"></script>
 		<script src="js/load.js"></script>
+		<script src="js/jquery/jquery-1.4.2.min.js"></script>
 		<div id="loader"></div>
 		<div id="whyPrivate" class="modal">
 		    <div class="modal-cont">
 			    <div id="modal-header">
-				    <p style="margin-left:20px;"><b>Why do you keep your MIDIs private?</b><span class="close" style="float:right;margin-right:20px;font-size:40px;" onclick='document.getElementsByClassName("modal")[0].style.display="none"' title="ok now I know why, now close and get off my screen">&times;</span></p>
+				    <p style="margin-left:20px;"><b>Why do I keep my MIDIs private?</b><span class="close" onclick='document.getElementsByClassName("modal")[0].style.display="none"' title="ok now I know why, now fvck off my screen">Close</span></p>
 				</div>
 				<div id="modal-content">
 				    <p><h2><b><i><del>Because why not? :smirk:</del></i></b></h2>It has come to my attention that there are other users who steal parts of others' MIDIs, which include phrases, and some segments. There are also cases where people modify others' works without the original author's explicit consent. As a result, all of my works are kept private and only accessible to certain people as a precaution. </p>
@@ -21,11 +22,11 @@
 			</div>
 		</div>
         <div id="header">
-            <div id="headerimg"><img src="src/header.png" style="height:50px;"></div>
+            <div id="headerimg"><img src="src/header.png" style="height:50px;" onclick="window.open('./index.html')"></div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">My Black MIDIs</a></li>
+                <li><a href="#">Compilation of my works</a></li>
                 <li><a href="info.html">More info</a></li>
             </ul>
         </div>
@@ -38,18 +39,18 @@
 	    </div>
         <div id="main" class="page_content">
 			<div class="items" style="color:#e87f13;">
-				<label for="descOrder" style="float:right;margin-top:4px;color:white;margin-right:15px;">Reverse listing order</label>
-				<input type="checkbox" id="descending" style="float:right;margin-top:4px;margin-right:7px;color:white;width:15px;height:15px;background-color:#2d2d2d;cursor:pointer;margin-left:8px;" name="descOrder">
-				<div id="sortbuttons" style="float:right">
-					<button id="sortbutton" style="margin-right:5px;padding:5px" onclick="switchOptions()">Title</button>
-				</div>
-				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
-				<input type="text" id="searchbar" placeholder="Enter keywords..." onkeyup="search()" style="width:220px" />
+				<input type="checkbox" id="descending" style="float:left;margin-top:4px;margin-right:7px;color:white;width:15px;height:15px;cursor:pointer;margin-left:8px;" name="descOrder">
+				<label for="descOrder" style="float:left;margin-top:4px;color:white;margin-right:15px;">Reverse listing order</label>
+				<input type="text" id="searchbar" placeholder="Enter keywords here..." onkeyup="search()" style="width:220px" />
 				<select id="searchoptions" style="margin-right:10px">
 					<option>Search by title</option>
 					<option>Search by artist name</option>
 				</select>
 				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Search:</b></span>
+				<div id="sortbuttons" style="float:right">
+					<button id="sortbutton" style="margin-right:5px;padding:5px" onclick="switchOptions()">Title</button>
+				</div>
+				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
 			</div>
 			<br><br>
 			<div id="tableSection">

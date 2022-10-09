@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>(in development) reymundokun's Official Website</title>
+        <title>(beta) reymundokun's Official Website</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="styles.css" />
         <script src="date.js"></script>
@@ -9,23 +9,32 @@
     <body onload="delay()">
         <script src="js/load.js"></script>
         <div id="header">
-            <div id="headerimg"><img src="src/header.png" style="height:50px;"></div>
+            <div id="headerimg"><img src="src/header.png" style="height:50px;" onclick="window.open('./index.html')"></div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="black_midis.html">My Black MIDIs</a></li>
+                <li><a href="black_midis.html">Compilation of my works</a></li>
                 <li><a href="info.html">More info</a></li>
             </ul>
         </div>
         <div id="loader"></div>
         <div id="introtext" class="page_content" style="display:none">
+			<span style="font-size:20pt;">&nbsp;Hello there! My name is</span><br>
+            <b style="font-size:60pt;margin-top:15px;color:#e87f13">Reymundo</b>
+			<br><br>
+			<p>I'm 16 years old, from the Philippines, a high school student, and a member of the <b>Philippine Black MIDI Team (PBMT)</b> since March 2022. I have joined the Black MIDI Community last 2021, and up until this moment, I'm trying my best to improve my blacking skills <del>(but I don't think I'm improving that much :P).</p>
+        </div>
+		<!--
+		<div id="introtext2" class="page_content" style="display:none">
             <img src="src/left_image.png" style="float:right;width:300px;height:300px;padding:4px 40px;">
             <b style="font-size:50px;">A few info about myself</b>
             <p>Hello! I am Reymundo (aka "reymundokun"). I'll place a picture of Honoka from Love Live! in here (and some other areas in this site) because I don't want to show my face brrrrrrrr<br><br>I'm 16 years old, from the Philippines, a high school student, and a member of the <b>Philippine Black MIDI Team (PBMT)</b> since March 2022. I have joined the Black MIDI Community last 2021, and up until this moment, I'm trying my best to improve my blacking skills <del>(but I don't think I'm improving that much :P).</del></p>
             <p>I have already done some Black MIDIs (as of the time of this writing); most of these are opening and ending themes from my favorite anime series and films. This music genre came to my interest back in 2019, but started to make MIDIs just last year, few months before I join the Black MIDI Community. I haven't played or encountered any musical instruments, but I have some knowledge about music theory.</p>
         </div>
-        <div id="intro" class="page_content"></div>
-		<div id="color2" class="page_content"></div>
+		-->
+        <div id="intro" class="page_content">
+			<img src="src/left_image.png" style="float:right;width:300px;height:300px;margin:120px 70px">
+		</div>
         <div id="main" class="page_content">
             <h4>My personal hobbies</h4>
             <p>I love doing almost a lot of things, including:</p>
@@ -59,8 +68,61 @@
                     <p style="font-size:14pt;"><i>A blackened musical notation, also called a Black MIDI, black score and black sheet (Japanese: 黒楽譜, くろがくふ, Kuro Gakufu, literally "black sheet music") eponymously is a transcription of music that uses Musical Instrumental Digital Interface files, or MIDI files, to compose an incredibly and impossibly large number of notes. It is usually done by filling up the sheet with many thousands or millions of abnormally short notes—from 32nd notes and smaller. A completed black MIDI will look like a recklessly colored and scribbled drawing on ruled paper. Most blackened songs are remixes from existing songs, although there are a few original compositions floating around the Internet. The word 'black' in 'Black MIDI' refers to the notation's appearance of a certain blackened song, which one can obviously tell why it is a "black" MIDI.</i></p>
                 </div>
             </div>
-			<h4>Compilation of my Black MIDIs</h4>
-            <iframe style="width:100%;height:800px;" src="https://www.youtube.com/embed/videoseries?list=PLjzb0UxHSujPZCvZEDFsgTejX3kHe6MBX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="team">
+			    <h4>🇵🇭&nbsp;&nbsp;Philippine Black MIDI Team</h4>
+				<p style="font-size:18pt">Click on any of these to visit their YouTube channels.</p>
+				<div class="team_imgcontainer">
+				    <div id="member_card" onclick="window.open('https://www.youtube.com/c/29FroilanJR/')">
+				        <img src="src/team_pfps/29FroilanJR.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">29FroilanJR</span>
+				    </div>
+					<div id="member_card" onclick="window.open('https://www.youtube.com/c/Rinnosuke/')">
+				        <img src="src/team_pfps/Rinnosuke.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">Rinnosuke</span>
+				    </div>
+					<div id="member_card" onclick="window.open('https://www.youtube.com/c/DomiDamOfficial/')">
+				        <img src="src/team_pfps/DomiDam.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">DomiDam</span>
+				    </div>
+					<div id="member_card" onclick="window.open('https://www.youtube.com/channel/UCzTRo_rUF-0cka_v4CAFf2A/')">
+				        <img src="src/team_pfps/Gray_V..jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">Gray V.</span>
+				    </div>
+				</div>
+				<div class="team_imgcontainer">
+				    <div id="member_card" onclick="window.open('https://www.youtube.com/c/Emblazon/')">
+				        <img src="src/team_pfps/Emblazon.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">Emblazon</span>
+				    </div>
+				    <div id="member_card" onclick="window.open('https://www.youtube.com/c/vesteel_is_veiron/')">
+				        <img src="src/team_pfps/vesteel.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">vesteel</span>
+				    </div>
+					<div id="member_card" onclick="window.open('https://www.youtube.com/c/Edenathan256/')">
+				        <img src="src/team_pfps/Danify.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">Danify</span>
+				    </div>
+					<div id="member_card" onclick="window.open('https://www.youtube.com/channel/UCDC3tEYQtmc1MwUKwmHyedw/')">
+				        <img src="src/team_pfps/ArchaeoPX.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">ArchaeoPX</span>
+				    </div>
+				</div>
+				<div class="team_imgcontainer">
+				    <div id="member_card" onclick="window.open('https://www.youtube.com/channel/UCc76OXVPBRmHgVXJFZvs02A')">
+				        <img src="src/team_pfps/reymundokun.jpg" width="220" height="220" />
+						<br>
+				        <span style="text-align:center">reymundokun</span>
+				    </div>
+				</div>
+			</div>
         </div>
         <footer>Copyright &copy; 2022 reymundokun</footer>
     </body>

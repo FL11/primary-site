@@ -1,3 +1,7 @@
+/* you can tell that coding is such a complete nightmare. :'>>>>>>>>>>
+   (tangina naman kase ang kalat tignan minsan)
+   (buti ibang strand kinuha ko) */
+
 function switchOptions() {
   var sort_option = document.getElementById('sortbutton').innerHTML;
   
@@ -11,7 +15,16 @@ function switchOptions() {
 	  document.getElementById('sortbutton').innerHTML = 'Note count';
 	  break;
 	case 'Note count':
+	  mapDataToHtmlTable();
+	  document.getElementById('descending').checked = false;
+	  document.getElementById('descending').style.display = 'none';
+	  document.getElementsByTagName('label')[0].style.display = 'none';
+	  document.getElementById('sortbutton').innerHTML = 'Release date';
+	  break;
+	case 'Release date':
 	  sortByTitle();
+	  document.getElementById('descending').style.display = '';
+	  document.getElementsByTagName('label')[0].style.display = '';
 	  document.getElementById('sortbutton').innerHTML = 'Title';
 	  break;
   }
@@ -83,6 +96,20 @@ var mapDataToHtmlTable = function() {
 		"note_count": "39000",
 		"collab": "",
 		"video_url": "<a href='https://www.youtube.com/watch?v=0AJLgs6IFpM'>YouTube link</a>"
+	},
+	{
+		"name": "Realize<br><i style='font-size:10pt'>(Re:Zero kara Hajimeru Isekai Seikatsu S2 OP1)</i>",
+		"artist": "Konomi Suzuki",
+		"note_count": "363636",
+		"collab": "Philippine Black MIDI Team",
+		"video_url": "<a href='https://www.youtube.com/watch?v=zfdr1NMB-iI'>YouTube link</a>"
+	},
+	{
+		"name": "Futari Pinocchio<br><i style='font-size:10pt'>(\"Mamahaha no Tsurego ga Motokano datta\" ED)</i>",
+		"artist": "harmoe",
+		"note_count": "22900",
+		"collab": "",
+		"video_url": "<a href='https://www.youtube.com/watch?v=vGcIt6a4hLo'>YouTube link</a>"
 	}];
 	
 	midis.forEach((item, index) => {
