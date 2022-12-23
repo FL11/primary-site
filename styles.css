@@ -138,6 +138,12 @@ body {
 	padding: 15px;
 }
 
+a.yt_link {
+	color: #e87f13;
+	font-weight: bold;
+	text-decoration: none;
+}
+
 a:hover {
 	background-color: #995209;
 }

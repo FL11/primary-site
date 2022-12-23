@@ -1,6 +1,4 @@
-/* you can tell that coding is such a complete nightmare. :'>>>>>>>>>>
-   (tangina naman kase ang kalat tignan minsan)
-   (buti ibang strand kinuha ko) */
+// my reaction to that js: :o :o :o		- Eblmaozn, 2022
 
 function switchOptions() {
   var sort_option = document.getElementById('sortbutton').innerHTML;
@@ -39,28 +37,28 @@ var mapDataToHtmlTable = function() {
 		"artist": "unknown composer",
 		"note_count": "23000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=JtZbgBHNRpA'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=JtZbgBHNRpA'>YouTube link</a>"
 	},
 	{
 		"name": "Uchiage Hanabi",
 		"artist": "DAOKO x Kenshi Yonezu",
 		"note_count": "200000",
 		"collab": "29FroilanJR",
-		"video_url": "<a href='https://www.youtube.com/watch?v=G7lPWdfbodk'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=G7lPWdfbodk'>YouTube link</a>"
 	},
 	{
 		"name": "Brand New World <br><i style='font-size:10pt;'>('D4DJ First Mix' Ep. 10 Insert Song)</i>",
 		"artist": "Happy Around!",
 		"note_count": "50000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=JYqCcJxh8Dg'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=JYqCcJxh8Dg'>YouTube link</a>"
 	},
 	{
 		"name": "FIRE BIRD",
 		"artist": "Roselia",
 		"note_count": "166000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=eIB41bIcUhY'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=eIB41bIcUhY'>YouTube link</a>"
 	},
 	{
 		"name": "The Rumbling",
@@ -74,42 +72,56 @@ var mapDataToHtmlTable = function() {
 		"artist": "µ's",
 		"note_count": "47000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=z96D_XvRA1o'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=z96D_XvRA1o'>YouTube link</a>"
 	},
 	{
 		"name": "Susume→Tomorrow",
 		"artist": "Nitta Emi, Uchida Aya, Mimori Suzuko",
 		"note_count": "41000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=D9g3R1swA6I'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=D9g3R1swA6I'>YouTube link</a>"
 	},
 	{
 		"name": "ROZEN HORIZON",
 		"artist": "Roselia",
 		"note_count": "159000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=lPkdKY1TPo4'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=lPkdKY1TPo4'>YouTube link</a>"
 	},
 	{
 		"name": "Dekoboko<br><i style='font-size:10pt'>(TV Size)</i>",
 		"artist": "Kiyoe Yoshioka",
 		"note_count": "39000",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=0AJLgs6IFpM'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=0AJLgs6IFpM'>YouTube link</a>"
 	},
 	{
 		"name": "Realize<br><i style='font-size:10pt'>(Re:Zero kara Hajimeru Isekai Seikatsu S2 OP1)</i>",
 		"artist": "Konomi Suzuki",
 		"note_count": "363636",
 		"collab": "Philippine Black MIDI Team",
-		"video_url": "<a href='https://www.youtube.com/watch?v=zfdr1NMB-iI'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=zfdr1NMB-iI'>YouTube link</a>"
 	},
 	{
 		"name": "Futari Pinocchio<br><i style='font-size:10pt'>(\"Mamahaha no Tsurego ga Motokano datta\" ED)</i>",
 		"artist": "harmoe",
 		"note_count": "22900",
 		"collab": "",
-		"video_url": "<a href='https://www.youtube.com/watch?v=vGcIt6a4hLo'>YouTube link</a>"
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=vGcIt6a4hLo'>YouTube link</a>"
+	},
+	{
+		"name": "Kagome<br><i style='font-size:10pt'>(aka \"caloocan boi theme\", \"eh paano kung\")</i>",
+		"artist": "Lo Ki",
+		"note_count": "87000",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=A1XRK05qiPg'>YouTube link</a>"
+	},
+	{
+		"name": "ALiCE<br><i style='font-size:10pt'>(\"DJMAX RESPECT\" OST)</i>",
+		"artist": "장예나 / 장미",
+		"note_count": "108000",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=Grc47i9CIpw'>YouTube link</a>"
 	}];
 	
 	midis.forEach((item, index) => {
