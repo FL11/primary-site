@@ -154,6 +154,11 @@ a:hover {
 	min-height: 100%;
 }
 
+#subheader {
+	margin: 0 auto;
+	position: relative;
+}
+
 #intro {
     background: linear-gradient(109.6deg, rgb(33, 31, 31) 11.2%, rgba(0, 0, 0, 0.93) 98.9%);
 	display: none;
@@ -164,12 +169,12 @@ a:hover {
 }
 
 #introtext {
-    margin-top: 80px;
-	margin-left: 34px;
+    margin-top: 69px; /* lmao nice */
+	margin-left: 70px;
 	float: left;
 	z-index: 1;
 	padding: 30px;
-	width:60%;
+	width:52%;
 }
 
 
@@ -357,8 +362,9 @@ table tr:nth-child(even) {
 	cursor: pointer;
 }
 
-.cards {
+#cards {
 	display: flex;
+	place-content: center;
 	animation-name: moveUp;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
