@@ -33,7 +33,7 @@ var mapDataToHtmlTable = function() {
 	var table = document.getElementById('mytable');
 	
 	var midis = [{
-		"name": "The Piano",
+		"name": "The Piano<br><i style='font-size:10pt'>(\"Dancing Line\" OST)</i>",
 		"artist": "unknown composer",
 		"note_count": "23000",
 		"collab": "",
@@ -122,7 +122,63 @@ var mapDataToHtmlTable = function() {
 		"note_count": "108000",
 		"collab": "",
 		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=Grc47i9CIpw'>YouTube link</a>"
-	}];
+	},
+	{
+		"name": "Happy Nyan! Days",
+		"artist": "A·ZU·NA",
+		"note_count": "76000",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=9TJNLfQb4Wg'>YouTube link</a>"
+	},
+	{
+		"name": "Kuchizuke Diamond<br><i style='font-size:10pt'>(\"Yamada-kun to 7-nin no Majo\" OP)</i>",
+		"artist": "WEAVER",
+		"note_count": "98765",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=jxYrkUuAzio'>YouTube link</a>"
+	},
+	{
+		"name": "Colorful Dreams! Colorful Smiles!<br><i style='font-size:10pt'>(TV Size)</i>",
+		"artist": "Nijigasaki High School Idol Club",
+		"note_count": "24000",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=jxYrkUuAzio'>YouTube link</a>"
+	},
+	{
+		"name": "IDOL<br><i style='font-size:10pt'>(TV Size) ('Oshi no Ko' OP)</i>",
+		"artist": "YOASOBI",
+		"note_count": "67890",
+		"collab": "29FroilanJR, Emblazon",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=8SYEJ0PZPfI'>YouTube link</a>"
+	},
+	{
+		"name": "Bokura wa Ima no Naka de<br><i style='font-size:10pt'>(TV Size) ('Love Live! School idol project Season 1' OP)</i>",
+		"artist": "µ's",
+		"note_count": "36500",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=v2DkvimztR0'>YouTube link</a>"
+	},
+	{
+		"name": "NAME<br><i style='font-size:10pt'>(TV Size) ('Suki na Ko ga Megane wo Wasureta' OP)</i>",
+		"artist": "tsuzuri",
+		"note_count": "33333",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=2p4hkSYFuxc'>YouTube link</a>"
+	},
+	{
+		"name": "Paraglider<br><i style='font-size:10pt'>(TV Size) ('Yumemiru Danshi wa Genjitsushugisha' OP)</i>",
+		"artist": "Kaori Ishihara",
+		"note_count": "40000",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=OuCXGA4OcfY'>YouTube link</a>"
+	},
+	{
+		"name": "START:DASH!!<br><i style='font-size:10pt'>('Love Live! School idol project' OST)</i>",
+		"artist": "µ's",
+		"note_count": "120000",
+		"collab": "",
+		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=281nj6UeiCY'>YouTube link</a>"
+	},];
 	
 	midis.forEach((item, index) => {
 		tableElement += '<tr>';
