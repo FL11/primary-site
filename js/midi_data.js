@@ -134,7 +134,7 @@ var mapDataToHtmlTable = function() {
 		"name": "Kuchizuke Diamond<br><i style='font-size:10pt'>(\"Yamada-kun to 7-nin no Majo\" OP)</i>",
 		"artist": "WEAVER",
 		"note_count": "98765",
-		"collab": "",
+		"collab": "29FroilanJR",
 		"video_url": "<a class='yt_link' href='https://www.youtube.com/watch?v=jxYrkUuAzio'>YouTube link</a>"
 	},
 	{
