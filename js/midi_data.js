@@ -1,25 +1,25 @@
 // my reaction to that js: :o :o :o		- Eblmaozn, 2022
 
 function switchOptions() {
-  var sort_option = document.getElementById('sortbutton').innerHTML;
+  var sort_option = document.getElementById('sortoptions').value;
   
   switch(sort_option) {
-	case 'Title':
+	case 'Artist':
 	  sortByArtistName();
 	  document.getElementById('sortbutton').innerHTML = 'Artist';
 	  break;
-	case 'Artist':
+	case 'Note count':
 	  sortByCount();
 	  document.getElementById('sortbutton').innerHTML = 'Note count';
 	  break;
-	case 'Note count':
+	case 'Release date (oldest to newest only)':
 	  mapDataToHtmlTable();
 	  document.getElementById('descending').checked = false;
 	  document.getElementById('descending').style.display = 'none';
 	  document.getElementsByTagName('label')[0].style.display = 'none';
 	  document.getElementById('sortbutton').innerHTML = 'Release date';
 	  break;
-	case 'Release date':
+	case 'Title':
 	  sortByTitle();
 	  document.getElementById('descending').style.display = '';
 	  document.getElementsByTagName('label')[0].style.display = '';

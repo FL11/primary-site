@@ -14,10 +14,10 @@
 		<div id="whyPrivate" class="modal">
 		    <div class="modal-cont">
 			    <div id="modal-header">
-				    <p style="margin-left:20px;"><b>Why do I keep my MIDIs private?</b><span class="close" onclick='document.getElementsByClassName("modal")[0].style.display="none"' title="ok now I know why, now fvck off my screen">Close</span></p>
+				    <p style="margin-left:20px;"><b>Why do I keep my MIDIs private?</b><span class="close" onclick='document.getElementsByClassName("modal")[0].style.display="none"' title="ok now I know why, now fvck off my screen">&times;</span></p>
 				</div>
 				<div id="modal-content">
-				    <p><h2><b><i><del>Because why not? :smirk:</del></i></b></h2>It has come to my attention that there are other users who steal parts of others' MIDIs, which include phrases, and some segments. There are also cases where people modify others' works without the original author's explicit consent. As a result, all of my works are kept private and only accessible to certain people as a precaution. </p>
+				    <p><h2><b>I wanted to, why not? 😏</b></h2>It has come to my attention that there are other users who steal parts of others' MIDIs, which include phrases, and some segments. There are also cases where people modify others' works without the original author's consent. As a result, all of my works <b>are kept private</b> and are only accessible to certain people (just to be safe!). </p>
 				</div>
 			</div>
 		</div>
@@ -38,6 +38,7 @@
 			<img class="bannerimg" src="src/headers/black_midis.png" style="height:350px;width:100%;" />
 	    </div>
         <div id="main" class="page_content">
+		    <center><span style="font-size:16pt;">Updated list of finished Black MIDIs as of <b>August 22, 2023</b></span><br><br><br></center>
 			<div class="items" style="color:#e87f13;">
 				<input type="checkbox" id="descending" style="float:left;margin-top:4px;margin-right:7px;color:white;width:15px;height:15px;cursor:pointer;margin-left:8px;" name="descOrder">
 				<label for="descOrder" style="float:left;margin-top:4px;color:white;margin-right:15px;">Reverse listing order</label>
@@ -47,9 +48,17 @@
 					<option>Search by artist name</option>
 				</select>
 				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Search:</b></span>
+				<select id="sortoptions" style="float:right" onchange="switchOptions();">
+				    <option>Title</option>
+					<option>Artist</option>
+					<option>Note count</option>
+					<option>Release date (oldest to newest only)</option>
+				</select>
+				<!--
 				<div id="sortbuttons" style="float:right">
 					<button id="sortbutton" style="margin-right:5px;padding:5px" onclick="switchOptions()">Title</button>
 				</div>
+				-->
 				<span style="font-size:16pt;float:right;margin-right:12px"><b>&nbsp;&nbsp;Sort by:</b></span>
 			</div>
 			<br><br>
@@ -61,6 +70,6 @@
 			  <button id="sheets" onclick="window.open('https://docs.google.com/spreadsheets/d/15kBIL_hKLm9XrVX2J3RC_ehXGvW6Iy9i', '_blank');">View list</button>
 			</div>
 		</div>
-		<footer>Copyright &copy; 2022 reymundokun</footer>
+		<footer>Copyright &copy; 2023 reymundokun</footer>
     </body>
 <html>

@@ -409,7 +409,7 @@ table tr:nth-child(even) {
 	float:right;
 }
 
-#searchoptions, #searchbar {
+#searchoptions, #searchbar, #sortoptions {
 	background-color: #2d2d2d;
 	padding: 4px 5px;
 	color: white;
@@ -418,13 +418,17 @@ table tr:nth-child(even) {
 	border: 1px solid #e87f13;
 }
 
-#searchoptions:focus, #searchbar:focus {
+#searchoptions:focus, #searchbar:focus, #sortoptions:focus {
 	-webkit-animation-name: glow_border;
 	-webkit-animation-duration: 0.3s;
 	-webkit-animation-fill-mode: forwards;
 	animation-name: glow_border;
 	animation-duration: 0.3s;
 	animation-fill-mode: forwards;
+}
+
+select option:hover {
+	box-shadow: 0 0 10px 100px #e87f13 inset;
 }
 
 #sortbutton {
@@ -508,12 +512,17 @@ p { line-height: 1.4em; }
 	background-color: #2a2a2a;
 	position: absolute;
 	padding: 20px;
+	-webkit-border-bottom-left-radius: 14px;
+	-webkit-border-bottom-right-radius: 14px;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+	font-size: 16pt;
 }
 
 .close {
 	float:right;
 	margin-right:10px;
-	font-size: 12pt;
+	font-size: 32pt;
 	background-color: #8b0000;
 	padding: 10px;
 	margin-top: -12px;
