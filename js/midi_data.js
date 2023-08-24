@@ -184,7 +184,7 @@ var mapDataToHtmlTable = function() {
 		tableElement += '<tr>';
 		tableElement += '<td><b>' + midis[index].name + '</b></td>';
 		tableElement += '<td>' + midis[index].artist + '</td>';
-		tableElement += '<td align="center">' + midis[index].note_count + '</td>';
+		tableElement += '<td align="center" style="font-size:16pt"><b>' + midis[index].note_count + '</b></td>';
 		tableElement += '<td>' + midis[index].collab + '</td>';
 		tableElement += '<td>' + midis[index].video_url + '</td>';
 		tableElement += '</tr>'
